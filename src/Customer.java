@@ -1,37 +1,72 @@
 
 import java.util.ArrayList;
 
+/**
+ * @author willi
+ *
+ */
 public class Customer {
-   private Name name;
-   private static String customerId;
-   private ArrayList<Movie> rentedMovies;
+   /**
+ * 
+ */
+private Name name;
+   /**
+ * 
+ */
+private static String customerId;
+   /**
+ * 
+ */
+private ArrayList<Movie> rentedMovies;
 
-   public Name getName() {
+   /**
+ * 
+ * 
+ */
+public Name getName() {
        return name;
    }
 
-   public void setName(Name name) {
+   /**
+ * @param name
+ */
+public void setName(Name name) {
        this.name = name;
    }
 
-   public static String getCustomerId() {
+   /**
+ * @return
+ */
+public static String getCustomerId() {
        return customerId;
    }
 
-   public static void setCustomerId(String customerId) {
+   /**
+ * @param customerId
+ */
+public static void setCustomerId(String customerId) {
        Customer.customerId = customerId;
    }
 
-   public ArrayList<Movie> getRentedMovies() {
+   /**
+ * @return
+ */
+public ArrayList<Movie> getRentedMovies() {
        return rentedMovies;
    }
 
-   public void setRentedMovies(ArrayList<Movie> rentedMovies) {
+   /**
+ * @param rentedMovies
+ */
+public void setRentedMovies(ArrayList<Movie> rentedMovies) {
        this.rentedMovies = rentedMovies;
    }
 
  
-   public String toString() {
+   /* (non-Javadoc)
+ * @see java.lang.Object#toString()
+ */
+public String toString() {
        return "Customer [name=" + name + ", rentedMovies=" + rentedMovies
                + "]";
    }
