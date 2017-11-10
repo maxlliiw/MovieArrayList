@@ -4,13 +4,16 @@ import java.util.ArrayList;
 
 public class DataManager {
 
-   private ArrayList<Movie> movies;
+   private static ArrayList<Movie> movies;
    private ArrayList<Customer> customers;
    public DataManager() {
 	   movies = new ArrayList<Movie>();
 	   customers = new ArrayList<Customer>();
    }
-
+   public static int getNumberOfMovies()
+   {
+       return movies.size();
+   }
    public void addMovie(Movie movie) {
        movies.add(movie);
    }
