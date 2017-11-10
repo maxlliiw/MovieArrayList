@@ -8,6 +8,13 @@ public class Movie {
    private int duration;
    private int numberOfCopiesAvailable;
    private ArrayList<Name> namesOfActors;
+   public Movie() {
+	   title = "";
+	   yearOfRelease = 0;
+	   duration = 0;
+	   numberOfCopiesAvailable = 0;
+	   namesOfActors = new ArrayList<>();
+   }
    
    public String getTitle() {
        return title;

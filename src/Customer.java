@@ -2,27 +2,22 @@
 import java.util.ArrayList;
 
 /**
- * @author willi
+ * @author William Shaw, Vishal Shah
  *
  */
 public class Customer {
-   /**
- * 
- */
+	
 private Name name;
-   /**
- * 
- */
 private static String customerId;
-   /**
- * 
- */
 private ArrayList<Movie> rentedMovies;
 
-   /**
- * 
- * 
- */
+public Customer()
+{
+	name = new Name();
+	customerId = "";
+	rentedMovies = new ArrayList<>();
+}
+
 public Name getName() {
        return name;
    }

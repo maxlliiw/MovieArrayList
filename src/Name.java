@@ -3,7 +3,11 @@ public class Name{
   
    private String firstName;
    private String lastName;
-   
+   public Name()
+   {
+	   firstName = "";
+	   lastName = "";
+   }
    public String getFirstName() {
        return firstName;
    }

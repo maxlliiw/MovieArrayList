@@ -4,8 +4,12 @@ import java.util.ArrayList;
 
 public class DataManager {
 
-   private ArrayList<Movie> movies = new ArrayList<Movie>();
-   private ArrayList<Customer> customers = new ArrayList<Customer>();
+   private ArrayList<Movie> movies;
+   private ArrayList<Customer> customers;
+   public DataManager() {
+	   movies = new ArrayList<Movie>();
+	   customers = new ArrayList<Customer>();
+   }
 
    public void addMovie(Movie movie) {
        movies.add(movie);
