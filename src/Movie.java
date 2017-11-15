@@ -8,11 +8,11 @@ public class Movie {
    private int duration;
    private int numberOfCopiesAvailable;
    private ArrayList<Name> namesOfActors;
-   public Movie() {
-	   title = "";
-	   yearOfRelease = 0;
-	   duration = 0;
-	   numberOfCopiesAvailable = 0;
+   public Movie(String title, int yearOfRelease, int duration, int NumberOfCopiesAvalible) {
+	   title = this.title;
+	   yearOfRelease = this.yearOfRelease;
+	   duration = this.duration;
+	   numberOfCopiesAvailable = this.numberOfCopiesAvailable;
 	   namesOfActors = new ArrayList<>();
    }
    
@@ -52,8 +52,8 @@ public class Movie {
        return namesOfActors;
    }
    
-   public void setNamesOfActors(ArrayList<Name> namesOfActors) {
-       this.namesOfActors = namesOfActors;
+   public void setNamesOfActors(Name actor) {
+       namesOfActors.add(actor);
    }
    
    public int compareTo(Movie movie) {

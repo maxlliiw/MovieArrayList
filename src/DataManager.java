@@ -6,7 +6,37 @@ public class DataManager {
 
    private static ArrayList<Movie> movies;
    private ArrayList<Customer> customers;
+   private Movie DieHard;
+   private Movie TheImitationGame;
+   private Movie Deadpool;
+   private Movie BabyDriver;
+   private Movie BobTheBuilder;
+   private Name BruceWillis;
+   private Name BradleyCooper;
+   private Name MattDamon;
+   private Name RobertDowny;
+   private Name ChrisHuntsworth;
+   private Name BobBuilder;
+   private Name WilliamShaw;
+   private Name VishalShah;
+   private Name BoSun;
+   
    public DataManager() {
+	   DieHard = new Movie("Die Hard", 1988, 140, 1000000);
+	   TheImitationGame = new Movie("The Imitation Game", 2015, 134, 10000000);
+	   Deadpool = new Movie("Deadpool", 2016, 140, 1000000);
+	   BabyDriver = new Movie("Baby Driver", 1988, 140, 1000000);
+	   BobTheBuilder = new Movie("BobTheBuilder", 1988, 140, 1000000);
+	   BruceWillis = new Name("Bruce","Willis");
+	   BradleyCooper = new Name("Bradley", "Cooper");
+	   MattDamon = new Name("Matt", "Damon");
+	   RobertDowny = new Name("Robert", "Downy");
+	   ChrisHuntsworth = new Name ("Chris","Huntsworth");
+	   BobBuilder = new Name ("Bob","Builder");
+	   WilliamShaw = new Name ("William","Shaw");
+	   VishalShah = new Name ("Vishal","Shah");
+	   BoSun = new Name ("Bo","Sun");
+	   
 	   movies = new ArrayList<>();
 	   customers = new ArrayList<>();
    }
@@ -17,7 +47,10 @@ public class DataManager {
    public void addMovie(Movie movie) {
        movies.add(movie);
    }
-
+   public void addActor(Name actor, Movie movie)
+   {
+	   movie.setNamesOfActors(actor);
+   }
    public void deleteMovie(Movie movie) {
        movies.remove(movie);
    }
