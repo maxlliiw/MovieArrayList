@@ -8,12 +8,14 @@ public class Movie {
    private int duration;
    private int numberOfCopiesAvailable;
    private ArrayList<Name> namesOfActors;
+   private ArrayList<Customer> namesOfCustomers;
    public Movie(String title, int yearOfRelease, int duration, int NumberOfCopiesAvalible) {
 	   title = this.title;
 	   yearOfRelease = this.yearOfRelease;
 	   duration = this.duration;
 	   numberOfCopiesAvailable = this.numberOfCopiesAvailable;
 	   namesOfActors = new ArrayList<>();
+	   namesOfCustomers = new ArrayList<>();
    }
    
    public String getTitle() {
@@ -54,6 +56,10 @@ public class Movie {
    
    public void setNamesOfActors(Name actor) {
        namesOfActors.add(actor);
+   }
+   public void setNamesOfCustomers(Customer customer)
+   {
+	   namesOfCustomers.add(customer);
    }
    
    public int compareTo(Movie movie) {

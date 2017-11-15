@@ -17,9 +17,9 @@ public class DataManager {
    private Name RobertDowny;
    private Name ChrisHuntsworth;
    private Name BobBuilder;
-   private Name WilliamShaw;
-   private Name VishalShah;
-   private Name BoSun;
+   private Customer WilliamShaw;
+   private Customer VishalShah;
+   private Customer BoSun;
    
    public DataManager() {
 	   DieHard = new Movie("Die Hard", 1988, 140, 1000000);
@@ -33,9 +33,9 @@ public class DataManager {
 	   RobertDowny = new Name("Robert", "Downy");
 	   ChrisHuntsworth = new Name ("Chris","Huntsworth");
 	   BobBuilder = new Name ("Bob","Builder");
-	   WilliamShaw = new Name ("William","Shaw");
-	   VishalShah = new Name ("Vishal","Shah");
-	   BoSun = new Name ("Bo","Sun");
+	   WilliamShaw = new Customer ("William","Shaw", "C3P0");
+	   VishalShah = new Customer ("Vishal","Shah", "66211");
+	   BoSun = new Customer ("Bo","Sun", "1337");
 	   
 	   movies = new ArrayList<>();
 	   customers = new ArrayList<>();
@@ -44,8 +44,13 @@ public class DataManager {
    {
        return movies.size();
    }
-   public void addMovie(Movie movie) {
+   public void addMovie(Movie movie) 
+   {
        movies.add(movie);
+   }
+   public void addCustomer(Customer customer, Movie movie)
+   {
+	   movie.setNamesOfCustomers(customer);
    }
    public void addActor(Name actor, Movie movie)
    {

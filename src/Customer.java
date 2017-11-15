@@ -11,10 +11,10 @@ private Name name;
 private static String customerId;
 private ArrayList<Movie> rentedMovies;
 
-public Customer()
+public Customer(String firstName, String lastName, String customerID)
 {
-	name = new Name();
-	customerId = "";
+	name = new Name(firstName, lastName);
+	customerId = customerID;
 	rentedMovies = new ArrayList<>();
 }
 
@@ -61,7 +61,7 @@ public void setRentedMovies(ArrayList<Movie> rentedMovies) {
    /* (non-Javadoc)eyoudujfighdsudwgfdshfud
  * @see java.lang.Object#toString()
  */
-public String toString() {
+public String customerDetails() {
        return "Customer [name=" + name + ", rentedMovies=" + rentedMovies
                + "]";
    }
