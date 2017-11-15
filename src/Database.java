@@ -3,6 +3,7 @@ import java.util.Iterator;
 
 public class Database {
 	private ArrayList<DataManager> mdata;
+	private DataManager dataMann;
 	
 	public Database()
 	{
@@ -40,6 +41,42 @@ public class Database {
 		else
 		{
 			System.out.println("ERROR NO Movies");
+		}
+	}
+	public void listMoviesByActor(Name name)
+	{
+		ArrayList<Movie> actorMovies = new ArrayList<>();
+		actorMovies = dataMann.findMoviesByActorName(name);
+		for(int i = 0;i<=actorMovies.size();i++)
+		{
+			System.out.println(actorMovies.get(i));
+		}
+	}
+	public void listMoviesByYear(int year)
+	{
+		ArrayList<Movie> yearMovies = new ArrayList<>();
+		yearMovies = dataMann.findMoviesByYear(year);
+		for(int i = 0;i<=yearMovies.size();i++)
+		{
+			System.out.println(yearMovies.get(i));
+		}
+	}
+	public void listMoviesByTimePeriod(int startYear, int endYear)
+	{
+		ArrayList<Movie> yearMovies = new ArrayList<>();
+		yearMovies = dataMann.findMoviesByTimePeriod(startYear, endYear);
+		for(int i = 0;i<=yearMovies.size();i++)
+		{
+			System.out.println(yearMovies.get(i));
+		}
+	}
+	public void listMoviesByCustomer(String CustomerId)
+	{
+		ArrayList<Customer> customerMovies = new ArrayList<>();
+		customerMovies = dataMann.findMoviesByCustomer(CustomerId);
+		for(int i = 0;i<=customerMovies.size();i++)
+		{
+			System.out.println(customerMovies.get(i));
 		}
 	}
 }

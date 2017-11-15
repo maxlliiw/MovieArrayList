@@ -7,8 +7,8 @@ public class DataManager {
    private static ArrayList<Movie> movies;
    private ArrayList<Customer> customers;
    public DataManager() {
-	   movies = new ArrayList<Movie>();
-	   customers = new ArrayList<Customer>();
+	   movies = new ArrayList<>();
+	   customers = new ArrayList<>();
    }
    public static int getNumberOfMovies()
    {
@@ -71,14 +71,14 @@ public class DataManager {
        return yearMovies;
    }
 
-   public ArrayList<Movie> findMoviesByCustomer(String customerId) {
-       for (Customer customer : customers) {
+   public ArrayList<Customer> findMoviesByCustomer(String customerId) {
+	   ArrayList<Customer> customerMovies = new ArrayList<>();
+	   for (Customer customer : customers) {
            if (customer.getCustomerId().equals(customerId)) {
-               return customer.getRentedMovies();
+               customerMovies.add(customer);
            }
        }
-       return null;
-
+       return customerMovies;
    }
 
    public void printMoviesInOrder() {

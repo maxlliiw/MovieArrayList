@@ -76,10 +76,10 @@ public class Movie {
        return true;
    }
    
-   public String toString() {
-       return "Movie [title=" + title + ", yearOfRelease=" + yearOfRelease
-               + ", duration=" + duration + ", numberOfCopiesAvailable="
-               + numberOfCopiesAvailable + ", namesOfActors=" + namesOfActors
+   public String getMovieDetails() {
+       return "Movie Title: " + title + ", Year Released" + yearOfRelease
+               + ", Duration in minute(s)" + duration + "minute(s)" + ", Number of Copies Avalible: "
+               + numberOfCopiesAvailable + ", Cast: " + namesOfActors
                + "]";
    }
   
